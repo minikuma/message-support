@@ -1,0 +1,23 @@
+server:
+  port: 9090
+spring:
+  profiles:
+    active: local
+cloud:
+  aws:
+    stack:
+      auto: false
+    credentials:
+      access-key:
+      secret-key:
+    region:
+      static: us-east-1
+localstack:
+  sns:
+    url: http://localhost:4575
+  sqs:
+    url: http://localhost:4576
+sns:
+  topicName: spring-cloud-test-topic
+sqs:
+  queueName: spring-cloud-test-queue
